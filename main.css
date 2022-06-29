@@ -1,0 +1,165 @@
+:root {
+	--light: #f27059;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: #f7b267;
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 550;
+	color: rgb(51, 51, 51);
+	margin-bottom: 0.6rem;
+    margin-top: 3rem;
+}
+
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: #f27059;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	color: wheat;
+}
+
+#new-task-input::placeholder {
+	color: wheat;
+}
+
+#new-task-submit {
+	color: crimson;
+	font-size: 1.5rem;
+	font-weight: 700;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.4s;
+	padding: 0px 20px ;
+	border: 1px solid wheat;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+	color: wheat;
+	background-color: #f27059;;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 550;
+	color: rgb(51, 51, 51);
+	margin-bottom: 20px;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--light);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: wheat;
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: white;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	color: crimson;
+}
+
+.task .actions .delete {
+	color: crimson;
+}
+
+
+@media(max-width:998px){
+    html{
+        font-size: 85%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 75%;
+    }
+}
